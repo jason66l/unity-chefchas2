@@ -34,7 +34,7 @@ public class PlateInteraction : MonoBehaviour
         //drop
         if (!(Pickup.pickUp) ){
             
-            if (RaycastView.placeOnTable){
+            if (RaycastView.lookingAtTable){
             
                 Vector3 plateHolderPosition = RaycastView.hitObjectTransform.position;
                 plateHolderPosition += new Vector3(0.2f, 2.0f, -0.6f);
@@ -44,7 +44,7 @@ public class PlateInteraction : MonoBehaviour
                 Pickup.handsEmpty = true;
                 print("dropped on table");
 
-                RaycastView.placeOnTable = false;
+                RaycastView.lookingAtTable = false;
             }
             
             
@@ -55,7 +55,7 @@ public class PlateInteraction : MonoBehaviour
                 Pickup.handsEmpty = true;
                 print("dropped");
 
-                RaycastView.placeOnTable = false;
+                RaycastView.lookingAtTable = false;
 
 
             }

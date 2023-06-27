@@ -8,32 +8,24 @@ public class PlateInteraction : MonoBehaviour
     public GameObject playerHands;
     private Rigidbody plateRigidbody;
 
-
-
-
-
-
     void Start(){
         plateRigidbody = GetComponent<Rigidbody>();
     }
     
     void Update(){
     
-  
-
-        //pick up
         if (Pickup.pickUp && inRange){
             
-            transform.position = playerHands.transform.position;
-            plateRigidbody.isKinematic = true;
-            Pickup.handsEmpty = false;
-            print("picked up");
-        
+           transform.position = playerHands.transform.position;
+           plateRigidbody.isKinematic = true;
+           Pickup.handsEmpty = false;
+           print("picked up");
+           
         }
 
-        //drop
         if (!(Pickup.pickUp) ){
             
+<<<<<<< HEAD
             if (RaycastView.lookingAtTable){
             
                 Vector3 plateHolderPosition = RaycastView.hitObjectTransform.position;
@@ -61,11 +53,18 @@ public class PlateInteraction : MonoBehaviour
             }
 
         
+=======
+           transform.position = transform.position;
+           plateRigidbody.isKinematic = false;
+           Pickup.handsEmpty = true;
+           print("dropped");
+          
+>>>>>>> parent of 300701e (place between tables)
 
         }
-    }
 
-    
+
+    }
 
     void OnTriggerEnter(Collider other) {
        
@@ -88,7 +87,6 @@ public class PlateInteraction : MonoBehaviour
 
         }
     }
-    
+    }
     
 
-}

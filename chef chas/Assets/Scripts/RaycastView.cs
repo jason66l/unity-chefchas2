@@ -5,9 +5,12 @@ using UnityEngine;
 public class RaycastView : MonoBehaviour
 {
     public Material outlineMaterial;
+<<<<<<< HEAD
     public static bool lookingAtTable;
     public static Transform hitObjectTransform;
     
+=======
+>>>>>>> parent of 300701e (place between tables)
     private Renderer hitObjectRenderer;
     private Material previousMaterial;
 
@@ -20,17 +23,16 @@ public class RaycastView : MonoBehaviour
     {
         if ((Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitInfo, 1.5f)))
         {
-            
             GameObject hitObject = hitInfo.collider.gameObject;
-            hitObjectTransform = hitObject.GetComponent<Transform>();
             
-            
-            //print(selectedTablePlateHolder.position);
             
             if (hitObject.tag == ("placeable")){   
                 
+<<<<<<< HEAD
                 lookingAtTable = true;
 
+=======
+>>>>>>> parent of 300701e (place between tables)
                 hitObjectRenderer = hitObject.GetComponent<Renderer>();
                 if (previousMaterial == null)
                 {
@@ -45,7 +47,6 @@ public class RaycastView : MonoBehaviour
 
             if (hitObjectRenderer != null && previousMaterial != null)
                 {
-                    
                     hitObjectRenderer.material = previousMaterial;
                     previousMaterial = null;
                 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RaycastView : MonoBehaviour
 {
     public Material outlineMaterial;
-    public static bool placeOnTable;
+    public static bool lookingAtTable;
     public static Transform hitObjectTransform;
     
     private Renderer hitObjectRenderer;
@@ -29,7 +29,7 @@ public class RaycastView : MonoBehaviour
             
             if (hitObject.tag == ("placeable")){   
                 
-                placeOnTable = true;
+                lookingAtTable = true;
 
                 hitObjectRenderer = hitObject.GetComponent<Renderer>();
                 if (previousMaterial == null)

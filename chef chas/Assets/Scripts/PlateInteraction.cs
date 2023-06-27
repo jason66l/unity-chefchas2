@@ -21,7 +21,7 @@ public class PlateInteraction : MonoBehaviour
     
   
 
-        //pick up
+        //pick up if space bar pressed and plate in range
         if (Pickup.pickUp && inRange){
             
             transform.position = playerHands.transform.position;
@@ -31,10 +31,12 @@ public class PlateInteraction : MonoBehaviour
         
         }
 
-        //drop
+        //if spacebar pressed run through this
         if (!(Pickup.pickUp) ){
             
-            if (RaycastView.placeOnTable){
+            
+            //if looking at table place plate on top of table
+            if (RaycastView.lookingAtTable){
             
                 Vector3 plateHolderPosition = RaycastView.hitObjectTransform.position;
                 plateHolderPosition += new Vector3(0.2f, 2.0f, -0.6f);
@@ -44,7 +46,7 @@ public class PlateInteraction : MonoBehaviour
                 Pickup.handsEmpty = true;
                 print("dropped on table");
 
-                RaycastView.placeOnTable = false;
+                RaycastView.lookingAtTable = false;
             }
             
             
@@ -55,7 +57,7 @@ public class PlateInteraction : MonoBehaviour
                 Pickup.handsEmpty = true;
                 print("dropped");
 
-                RaycastView.placeOnTable = false;
+                RaycastView.lookingAtTable = false;
 
 
             }

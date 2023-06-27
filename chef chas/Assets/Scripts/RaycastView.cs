@@ -6,9 +6,12 @@ public class RaycastView : MonoBehaviour
 {
     public Material outlineMaterial;
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static bool lookingAtTable;
     public static Transform hitObjectTransform;
     
+=======
+>>>>>>> parent of 300701e (place between tables)
 =======
 >>>>>>> parent of 300701e (place between tables)
     private Renderer hitObjectRenderer;
@@ -29,8 +32,11 @@ public class RaycastView : MonoBehaviour
             if (hitObject.tag == ("placeable")){   
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 lookingAtTable = true;
 
+=======
+>>>>>>> parent of 300701e (place between tables)
 =======
 >>>>>>> parent of 300701e (place between tables)
                 hitObjectRenderer = hitObject.GetComponent<Renderer>();

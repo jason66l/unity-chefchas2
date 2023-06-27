@@ -26,6 +26,7 @@ public class PlateInteraction : MonoBehaviour
         if (!(Pickup.pickUp) ){
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (RaycastView.lookingAtTable){
             
                 Vector3 plateHolderPosition = RaycastView.hitObjectTransform.position;
@@ -54,11 +55,16 @@ public class PlateInteraction : MonoBehaviour
 
         
 =======
+=======
+>>>>>>> parent of 300701e (place between tables)
            transform.position = transform.position;
            plateRigidbody.isKinematic = false;
            Pickup.handsEmpty = true;
            print("dropped");
           
+<<<<<<< HEAD
+>>>>>>> parent of 300701e (place between tables)
+=======
 >>>>>>> parent of 300701e (place between tables)
 
         }
